@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><!-- Google tag (gtag.js) -->
-<script async="" src="./Vishvanath Mokashi - Profile_files/js"></script>
+<script async=""src="./Vishvanath Mokashi - Profile_files/js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -155,7 +155,7 @@
   <div class="container">
     <marquee behavior="scroll" direction="left" scrollamount="5" style="color: var(--highlight-color); font-weight: bold;">Welcome to my profile! ✨</marquee>
     <div class="top-bar">
-      <img src="vishvanath image.jpg" alt="Vishvanath Mokashi" class="profile-pic"/>
+      <img src="vishvanath.jpg" alt="Vishvanath Mokashi" class="profile-pic"/>
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/vishvanathmokashi" target="_blank" title="LinkedIn">
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="24" /></a>

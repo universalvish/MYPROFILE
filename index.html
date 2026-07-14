@@ -1,253 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vishvanath Mokashi - Profile</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffffee;
-      --text-color: #333;
-      --section-title: #0984e3;
-      --highlight-color: #6c5ce7;
-    }
-    body.dark-mode {
-      --bg-color: #2d3436;
-      --text-color: #f1f1f1;
-      --section-title: #74b9ff;
-      --highlight-color: #00cec9;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #00b894, #6c5ce7, #fd79a8);
-      color: var(--text-color);
-      margin: 0;
-      padding: 0;
-      transition: all 0.3s ease;
-    }
-    .container {
-      max-width: 900px;
-      background: var(--bg-color);
-      margin: 40px auto;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    }
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid var(--highlight-color);
-      object-fit: cover;
-    }
-    h1 { color: var(--highlight-color); margin-top: 20px; }
-    .section { margin-top: 25px; }
-    .section h2 { color: var(--section-title); margin-bottom: 10px; }
-    ul { padding-left: 20px; }
-    .social-icons { margin-top: 10px; }
-    .social-icons a {
-      text-decoration: none;
-      margin-right: 15px;
-      font-size: 24px;
-      color: var(--text-color);
-      transition: color 0.3s;
-    }
-    .social-icons a:hover { color: #d63031; }
-    .toggle-switch { display: flex; align-items: center; gap: 8px; }
-    .toggle-switch input[type="checkbox"] {
-      width: 40px; height: 20px;
-      -webkit-appearance: none;
-      background-color: #c6c6c6;
-      border-radius: 10px;
-      position: relative;
-      outline: none;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .toggle-switch input[type="checkbox"]::before {
-      content: '';
-      position: absolute;
-      width: 18px; height: 18px;
-      border-radius: 50%;
-      top: 1px; left: 1px;
-      background-color: #fff;
-      transition: 0.3s;
-    }
-    .toggle-switch input[type="checkbox"]:checked {
-      background-color: #6c5ce7;
-    }
-    .toggle-switch input[type="checkbox"]:checked::before {
-      transform: translateX(20px);
-    }
-    @media screen and (max-width: 600px) {
-      .top-bar { flex-direction: column; text-align: center; }
-    }
-
-    /* Floating Chat Widget */
-    #chat-widget {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 300px;
-      max-height: 400px;
-      background-color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-      z-index: 1000;
-    }
-    #chat-header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px;
-      font-weight: bold;
-      text-align: center;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    #chat-box {
-      flex: 1;
-      padding: 10px;
-      overflow-y: auto;
-      background-color: #f7f7f7;
-    }
-    .message {
-      margin: 5px 0;
-      padding: 8px 12px;
-      border-radius: 15px;
-      max-width: 80%;
-    }
-    .user { background-color: #d1f5d3; align-self: flex-end; text-align: right; }
-    .bot { background-color: #f1f0f0; align-self: flex-start; text-align: left; }
-    #chat-input-area { display: flex; border-top: 1px solid #ddd; }
-    #user-input {
-      flex: 1; padding: 8px;
-      border: none; outline: none;
-      font-size: 14px;
-    }
-    #send-btn {
-      background-color: #4CAF50;
-      border: none; color: white;
-      padding: 0 15px; cursor: pointer;
-      font-size: 18px;
-    }
-    #send-btn:hover { background-color: #45a049; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishvanath Mokashi | Portfolio & AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <marquee behavior="scroll" direction="left" scrollamount="5" style="color: var(--highlight-color); font-weight: bold;">
-      Welcome to my profile! ✨
-    </marquee>
-    <div class="top-bar">
-      <img src="vishvanath image.jpg" alt="Vishvanath Mokashi" class="profile-pic"/>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/vishvanathmokashi" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="24" /></a>
-        <a href="https://www.instagram.com/siamvish" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="24" /></a>
-        <a href="https://www.facebook.com/vishvanathmokashi" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="24" /></a>
-      </div>
-      <div class="toggle-switch">
-        <label for="darkmode">🌙</label>
-        <input type="checkbox" id="darkmode" onclick="toggleDarkMode()">
-      </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Vishvanath Mokashi</div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="chat-toggle" id="chatToggle">
+                    <i class="fas fa-comments"></i> AI Assistant
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm Vishvanath Mokashi</h1>
+                <p class="tagline">CS Engineering Student | Software Developer | AI & Full Stack Enthusiast</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile.png" alt="Vishvanath Mokashi" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Computer Science Engineering Student</h3>
+                    <p>I'm pursuing B.Tech in Computer Science & Engineering with a passion for technology and innovation.</p>
+                    
+                    <h4>Career Goal:</h4>
+                    <p>To become a professional Software Engineer and build impactful AI-powered applications that solve real-world problems.</p>
+
+                    <h4>Core Interests:</h4>
+                    <ul class="interests-list">
+                        <li><i class="fas fa-brain"></i> Artificial Intelligence & Machine Learning</li>
+                        <li><i class="fas fa-layer-group"></i> Full Stack Development</li>
+                        <li><i class="fas fa-code"></i> Software Development</li>
+                        <li><i class="fas fa-shield-alt"></i> Cybersecurity</li>
+                        <li><i class="fas fa-cloud"></i> Cloud Computing</li>
+                    </ul>
+                </div>
+
+                <div class="education-card">
+                    <h4>Education</h4>
+                    <div class="education-item">
+                        <h5>B.Tech in Computer Science & Engineering</h5>
+                        <p class="year">Currently Pursuing</p>
+                    </div>
+                    
+                    <h4 style="margin-top: 2rem;">Certifications</h4>
+                    <ul class="cert-list">
+                        <li><i class="fas fa-certificate"></i> IBM SkillsBuild</li>
+                        <li><i class="fas fa-certificate"></i> Microsoft Learn</li>
+                        <li><i class="fas fa-certificate"></i> HP LIFE</li>
+                        <li><i class="fas fa-certificate"></i> Python Certification</li>
+                        <li><i class="fas fa-certificate"></i> Web Development Certification</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Web Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Database & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Core Knowledge</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">DSA</span>
+                        <span class="skill-tag">DBMS</span>
+                        <span class="skill-tag">OS</span>
+                        <span class="skill-tag">Networks</span>
+                        <span class="skill-tag">SE</span>
+                        <span class="skill-tag">OOP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>AI Powered PDF to JSON Engine</h3>
+                    <p>Advanced AI system that converts PDF documents into structured JSON format with intelligent data extraction and categorization.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>AI</span>
+                        <span>NLP</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>AI Lab Builder Platform</h3>
+                    <p>Interactive platform for building and testing AI models with a user-friendly interface and real-time visualization capabilities.</p>
+                    <div class="tech-stack">
+                        <span>React</span>
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-Commerce Website</h3>
+                    <p>Full-featured e-commerce platform with product catalog, shopping cart, and secure payment integration.</p>
+                    <div class="tech-stack">
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Student Management System</h3>
+                    <p>Comprehensive system for managing student records, grades, and academic information with role-based access control.</p>
+                    <div class="tech-stack">
+                        <span>Java</span>
+                        <span>SQL</span>
+                        <span>DBMS</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-portrait"></i>
+                    </div>
+                    <h3>Portfolio Website</h3>
+                    <p>Modern, responsive portfolio website showcasing professional profile, skills, and projects with integrated AI chatbot.</p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Connect With Me</h2>
+            <p class="contact-intro">Feel free to reach out! I'd love to hear from you.</p>
+            
+            <div class="contact-links">
+                <a href="https://github.com/universalvish" target="_blank" class="contact-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://instagram.com/vishvanathmokashi" target="_blank" class="contact-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://linkedin.com/in/vishvanath-mokashi" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="#" class="contact-link" onclick="openChat()">
+                    <i class="fas fa-comments"></i>
+                    <span>Chat with AI</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <i class="fas fa-robot"></i>
+                <span>AI Assistant</span>
+            </div>
+            <div class="chatbot-controls">
+                <select id="languageSelect" class="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                    <option value="mr">Marathi</option>
+                    <option value="gu">Gujarati</option>
+                    <option value="ta">Tamil</option>
+                    <option value="te">Telugu</option>
+                    <option value="kn">Kannada</option>
+                    <option value="ml">Malayalam</option>
+                </select>
+                <button id="closeChat" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>👋 Hello! I'm Vishvanath's AI Assistant. I can answer questions about his profile, skills, projects, and more. You can type or use the microphone to speak!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chatbot-input-area">
+            <div class="input-controls">
+                <input 
+                    type="text" 
+                    id="chatInput" 
+                    class="chat-input" 
+                    placeholder="Type your message or use the microphone..."
+                    autocomplete="off"
+                >
+                <button id="micBtn" class="mic-btn" title="Click to speak">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button id="sendBtn" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="voice-status" id="voiceStatus"></div>
+        </div>
     </div>
 
-    <h1>Vishvanath Mokashi</h1>
-    <div class="section"><h2>Objective</h2>
-      <p>To obtain a challenging position in the field of computer science where I can utilize my skills in programming, databases, and web development to contribute effectively to the organization's goals.</p>
-    </div>
-    <div class="section"><h2>Technical Skills</h2>
-      <ul><li>Python</li><li>Java</li><li>SQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Google Ads</li><li>Microsoft Office</li></ul>
-    </div>
-    <div class="section"><h2>Education</h2>
-      <ul><li><strong>B.Tech (Computer Science)</strong></li><li><strong>Diploma (Computer Engineering)</strong></li></ul>
-    </div>
-    <div class="section"><h2>Certifications & Courses</h2>
-      <ul>
-        <li>Inplant Training – Python & Android Development – TechnoWings, Solapur</li>
-        <li>Principles of Management – Great Learning Academy</li>
-        <li>AI Internship – Internship Studio</li>
-        <li>Microsoft Copilot Course – Microsoft Learn</li>
-        <li>Cybersecurity Awareness – HP LIFE</li>
-      </ul>
-    </div>
-    <div class="section"><h2>Languages Known</h2>
-      <ul><li>Marathi</li><li>Hindi</li><li>English</li></ul>
-    </div>
-    <div class="section"><h2>Hobbies & Interests</h2>
-      <ul><li>Blogging</li><li>Photography</li><li>Cycling</li><li>Gym</li></ul>
-    </div>
-  </div>
+    <!-- Chat Toggle Button (Floating) -->
+    <button class="chat-fab" id="chatFab" title="Open AI Assistant">
+        <i class="fas fa-comments"></i>
+    </button>
 
-  <!-- Floating ChatBot -->
-  <div id="chat-widget">
-    <div id="chat-header">💬 Chat with me!</div>
-    <div id="chat-box"></div>
-    <div id="chat-input-area">
-      <input type="text" id="user-input" placeholder="Type a message...">
-      <button id="send-btn">➤</button>
-    </div>
-  </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Vishvanath Mokashi. All rights reserved.</p>
+            <p>Built with <i class="fas fa-heart"></i> and AI</p>
+        </div>
+    </footer>
 
-  <script>// Hugging Face token placeholder
-const HF_API_TOKEN = "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";
-
-    function toggleDarkMode() { document.body.classList.toggle('dark-mode'); }
-
-    const sendBtn = document.getElementById("send-btn");
-    const userInput = document.getElementById("user-input");
-    const chatBox = document.getElementById("chat-box");
-
-    sendBtn.addEventListener("click", sendMessage);
-    userInput.addEventListener("keypress", e => { if(e.key === "") sendMessage(); });
-
-    function sendMessage(){
-      const message = userInput.value.trim();
-      if(!message) return;
-
-      const userMsg = document.createElement("div");
-      userMsg.classList.add("message","user");
-      userMsg.textContent = message;
-      chatBox.appendChild(userMsg);
-
-      userInput.value = "";
-      chatBox.scrollTop = chatBox.scrollHeight;
-
-      const botMsg = document.createElement("div");
-      botMsg.classList.add("message","bot");
-      botMsg.textContent = "Typing...";
-      chatBox.appendChild(botMsg);
-      chatBox.scrollTop = chatBox.scrollHeight;
-
-      setTimeout(()=>{
-        botMsg.textContent = getBotResponse(message);
-        chatBox.scrollTop = chatBox.scrollHeight;
-      }, 1000 + Math.random()*1000);
-    }
-
-    function getBotResponse(msg){
-      msg = msg.toLowerCase();
-      if(msg.includes("hi") || msg.includes("hello")){
-        const replies = ["Hello! 😄 How are you?","Hey there! 👋","Hi! Ready to chat? 🤖"];
-        return replies[Math.floor(Math.random()*replies.length)];
-      }
-      if(msg.includes("name")) return "I am your friendly chatbot 🤖. What's yours?";
-      if(msg.includes("how are you")) return "I'm doing great! 😄 And you?";
-      return ["Interesting! Tell me more…","Hmm… can you explain differently?","I need to think about that 🤔"][Math.floor(Math.random()*3)];
-    }
-  </script>
+    <script src="chatbot.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

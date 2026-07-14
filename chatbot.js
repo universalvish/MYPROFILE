@@ -1,3 +1,8 @@
+// MASTER SYSTEM PROMPT
+// This AI assistant represents Vishvanath Mokashi's professional portfolio
+// It only provides publicly available professional information
+// Privacy and security are the top priority
+
 // Multilingual Chatbot with Voice Support
 class MultilingualChatbot {
     constructor() {
@@ -6,6 +11,15 @@ class MultilingualChatbot {
         this.isListening = false;
         this.recognition = null;
         this.synthesis = window.speechSynthesis;
+        
+        // System Identity
+        this.identity = {
+            name: 'Vishvanath Mokashi',
+            role: 'Computer Science Engineering Student | Software Developer | AI & Full Stack Enthusiast',
+            interests: ['Artificial Intelligence', 'Full Stack Development', 'Software Engineering', 'Cybersecurity', 'Cloud Computing'],
+            contactLink: 'https://instagram.com/vishvanathmokashi'
+        };
+        
         this.initSpeechRecognition();
         this.setupEventListeners();
         this.loadKnowledgeBase();
@@ -204,12 +218,22 @@ class MultilingualChatbot {
     // Get Default Response
     getDefaultResponse() {
         const defaults = {
-            'en': "That's a great question! I'm here to help you learn more about Vishvanath's profile, skills, projects, and interests. Feel free to ask me anything!",
-            'hi': "यह एक शानदार सवाल है! मैं विश्वनाथ की प्रोफाइल, कौशल, परियोजनाओं और रुचियों के बारे में और जानने में आपकी मदद करने के लिए यहां हूं।",
-            'mr': "हे एक शानदार प्रश्न आहे! मी विश्वनाथ यांच्या प्रोफाइल, कौशल्य, प्रकल्प आणि रुचींबद्दल अधिक जाणून घेण्यात आपल्याला मदत करण्यासाठी येथे आहे."
+            'en': "That's a great question! I'm here to help you learn more about Vishvanath's professional profile, skills, projects, and interests. Feel free to ask me anything about his work and experience!",
+            'hi': "यह एक शानदार सवाल है! मैं विश्वनाथ की पेशेवर प्रोफाइल, कौशल, परियोजनाओं और रुचियों के बारे में आपकी मदद करने के लिए यहां हूं।",
+            'mr': "हे एक शानदार प्रश्न आहे! मी विश्वनाथ यांच्या पेशेवर प्रोफाइल, कौशल्य, प्रकल्प आणि रुचींबद्दल अधिक जाणून घेण्यात आपल्याला मदत करण्यासाठी येथे आहे."
         };
 
         return defaults[this.currentLanguage] || defaults['en'];
+    }
+
+    // Personal Information Request Handler (PRIVACY POLICY)
+    handlePersonalInfoRequest() {
+        const response = {
+            'en': "I'm sorry, but I can't share Vishvanath's private or confidential information. I can only discuss publicly available professional information. If you'd like to connect personally or ask questions beyond the portfolio, please visit his Instagram: https://instagram.com/vishvanathmokashi",
+            'hi': "मुझे खेद है, लेकिन मैं विश्वनाथ की निजी या गोपनीय जानकारी साझा नहीं कर सकता। मैं केवल सार्वजनिक रूप से उपलब्ध पेशेवर जानकारी पर चर्चा कर सकता हूं।",
+            'mr': "मुझे खेद है, लेकिन मैं विश्वनाथ की निजी या गोपनीय जानकारी साझा नहीं कर सकता। कृपया उनके Instagram पर संपर्क करें: https://instagram.com/vishvanathmokashi"
+        };
+        return response[this.currentLanguage] || response['en'];
     }
 
     // Send Message

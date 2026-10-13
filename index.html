@@ -4,42 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vishvanath Mokashi | Portfolio & AI Assistant</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Background Mesh Glow Elements -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-content">
-                <div class="logo">Vishvanath Mokashi</div>
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link">Home</a></li>
+                <a href="#home" class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">Vishvanath Mokashi</span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                <button class="chat-toggle" id="chatToggle">
-                    <i class="fas fa-comments"></i> AI Assistant
-                </button>
+                <div class="nav-actions">
+                    <button class="chat-toggle" id="chatToggle">
+                        <i class="fas fa-robot"></i> <span>AI Assistant</span>
+                    </button>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Hi, I'm Vishvanath Mokashi</h1>
-                <p class="tagline">CS Engineering Student | Software Developer | AI & Full Stack Enthusiast</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="badge-pulse"></span>
+                        <span>Open for Software Engineering & AI Roles ✨</span>
+                    </div>
+                    <h1>Hi, I'm <span class="highlight">Vishvanath Mokashi</span></h1>
+                    <p class="tagline">CS Engineering Student | Software Developer | AI & Full Stack Enthusiast</p>
+                    <p class="hero-desc">
+                        Passionate about crafting intelligent web applications, modern AI algorithms, and clean software architecture.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i> <span>Get In Touch</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="profile.png" alt="Vishvanath Mokashi" class="profile-img">
+                <div class="hero-image-wrapper">
+                    <div class="hero-avatar-ring">
+                        <img src="profile.png" alt="Vishvanath Mokashi" class="profile-img">
+                    </div>
+                    <div class="floating-chip chip-1">
+                        <i class="fas fa-brain text-purple"></i> AI & ML Focus
+                    </div>
+                    <div class="floating-chip chip-2">
+                        <i class="fas fa-code text-indigo"></i> Full Stack Dev
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -47,40 +86,60 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
+            <div class="section-header">
+                <span class="section-subtitle">Biography</span>
+                <h2>About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text-card glass-card">
+                    <div class="card-icon-badge">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                     <h3>Computer Science Engineering Student</h3>
-                    <p>I'm pursuing B.Tech in Computer Science & Engineering with a passion for technology and innovation.</p>
+                    <p>I am pursuing B.Tech in Computer Science & Engineering with a deep passion for modern technology, algorithmic problem solving, and software innovation.</p>
                     
-                    <h4>Career Goal:</h4>
-                    <p>To become a professional Software Engineer and build impactful AI-powered applications that solve real-world problems.</p>
+                    <div class="goal-box">
+                        <h4><i class="fas fa-bullseye"></i> Career Goal</h4>
+                        <p>To become a high-impact Software Engineer building scalable AI-powered applications that solve real-world industry challenges.</p>
+                    </div>
 
-                    <h4>Core Interests:</h4>
-                    <ul class="interests-list">
-                        <li><i class="fas fa-brain"></i> Artificial Intelligence & Machine Learning</li>
-                        <li><i class="fas fa-layer-group"></i> Full Stack Development</li>
-                        <li><i class="fas fa-code"></i> Software Development</li>
-                        <li><i class="fas fa-shield-alt"></i> Cybersecurity</li>
-                        <li><i class="fas fa-cloud"></i> Cloud Computing</li>
-                    </ul>
+                    <h4><i class="fas fa-star"></i> Core Interests & Specializations</h4>
+                    <div class="interests-grid">
+                        <div class="interest-item"><i class="fas fa-brain"></i> Artificial Intelligence & ML</div>
+                        <div class="interest-item"><i class="fas fa-layer-group"></i> Full Stack Web Apps</div>
+                        <div class="interest-item"><i class="fas fa-code"></i> Software Engineering</div>
+                        <div class="interest-item"><i class="fas fa-shield-alt"></i> Cybersecurity</div>
+                        <div class="interest-item"><i class="fas fa-cloud"></i> Cloud Computing</div>
+                    </div>
                 </div>
 
-                <div class="education-card">
-                    <h4>Education</h4>
-                    <div class="education-item">
-                        <h5>B.Tech in Computer Science & Engineering</h5>
-                        <p class="year">Currently Pursuing</p>
+                <div class="education-card glass-card">
+                    <div class="card-icon-badge">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Education & Certifications</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>B.Tech in Computer Science & Engineering</h4>
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> Currently Pursuing</span>
+                                <p>Comprehensive coursework in DSA, DBMS, Operating Systems, Networking, and Software Engineering.</p>
+                            </div>
+                        </div>
                     </div>
                     
-                    <h4 style="margin-top: 2rem;">Certifications</h4>
-                    <ul class="cert-list">
-                        <li><i class="fas fa-certificate"></i> IBM SkillsBuild</li>
-                        <li><i class="fas fa-certificate"></i> Microsoft Learn</li>
-                        <li><i class="fas fa-certificate"></i> HP LIFE</li>
-                        <li><i class="fas fa-certificate"></i> Python Certification</li>
-                        <li><i class="fas fa-certificate"></i> Web Development Certification</li>
-                    </ul>
+                    <h4 class="cert-title"><i class="fas fa-certificate"></i> Verified Certifications</h4>
+                    <div class="cert-grid">
+                        <div class="cert-badge"><i class="fas fa-award"></i> IBM SkillsBuild</div>
+                        <div class="cert-badge"><i class="fas fa-award"></i> Microsoft Learn</div>
+                        <div class="cert-badge"><i class="fas fa-award"></i> HP LIFE</div>
+                        <div class="cert-badge"><i class="fas fa-award"></i> Python Certification</div>
+                        <div class="cert-badge"><i class="fas fa-award"></i> Web Development Certification</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,41 +148,57 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2>Technical Skills</h2>
+            <div class="section-header">
+                <span class="section-subtitle">Tech Stack</span>
+                <h2>Technical Skills</h2>
+                <div class="section-line"></div>
+            </div>
             
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
+                <div class="skill-category glass-card">
+                    <div class="category-header">
+                        <i class="fas fa-code-branch category-icon"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
                     <div class="skill-tags">
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fas fa-terminal"></i> C</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> C++</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Web Technologies</h3>
+                <div class="skill-category glass-card">
+                    <div class="category-header">
+                        <i class="fas fa-laptop-code category-icon"></i>
+                        <h3>Web Technologies</h3>
+                    </div>
                     <div class="skill-tags">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fab fa-react"></i> React</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Database & Tools</h3>
+                <div class="skill-category glass-card">
+                    <div class="category-header">
+                        <i class="fas fa-database category-icon"></i>
+                        <h3>Database & Tools</h3>
+                    </div>
                     <div class="skill-tags">
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> SQL</span>
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Core Knowledge</h3>
+                <div class="skill-category glass-card">
+                    <div class="category-header">
+                        <i class="fas fa-microchip category-icon"></i>
+                        <h3>Core Knowledge</h3>
+                    </div>
                     <div class="skill-tags">
                         <span class="skill-tag">DSA</span>
                         <span class="skill-tag">DBMS</span>
@@ -140,71 +215,58 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Featured Projects</h2>
+            <div class="section-header">
+                <span class="section-subtitle">Portfolio</span>
+                <h2>Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
             
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-file-pdf"></i>
+                <div class="project-card glass-card">
+                    <div class="project-card-top">
+                        <div class="project-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <span class="project-category">AI / Data Engine</span>
                     </div>
                     <h3>AI Powered PDF to JSON Engine</h3>
                     <p>Advanced AI system that converts PDF documents into structured JSON format with intelligent data extraction and categorization.</p>
                     <div class="tech-stack">
-                        <span>Python</span>
-                        <span>AI</span>
-                        <span>NLP</span>
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">AI</span>
+                        <span class="tech-pill">NLP</span>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-flask"></i>
+                <div class="project-card glass-card">
+                    <div class="project-card-top">
+                        <div class="project-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <span class="project-category">Machine Learning</span>
                     </div>
                     <h3>AI Lab Builder Platform</h3>
                     <p>Interactive platform for building and testing AI models with a user-friendly interface and real-time visualization capabilities.</p>
                     <div class="tech-stack">
-                        <span>React</span>
-                        <span>Python</span>
-                        <span>TensorFlow</span>
+                        <span class="tech-pill">React</span>
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">TensorFlow</span>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3>E-Commerce Website</h3>
-                    <p>Full-featured e-commerce platform with product catalog, shopping cart, and secure payment integration.</p>
-                    <div class="tech-stack">
-                        <span>JavaScript</span>
-                        <span>React</span>
-                        <span>MySQL</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Student Management System</h3>
-                    <p>Comprehensive system for managing student records, grades, and academic information with role-based access control.</p>
-                    <div class="tech-stack">
-                        <span>Java</span>
-                        <span>SQL</span>
-                        <span>DBMS</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-portrait"></i>
+                <div class="project-card glass-card">
+                    <div class="project-card-top">
+                        <div class="project-icon">
+                            <i class="fas fa-portrait"></i>
+                        </div>
+                        <span class="project-category">Web & AI</span>
                     </div>
                     <h3>Portfolio Website</h3>
                     <p>Modern, responsive portfolio website showcasing professional profile, skills, and projects with integrated AI chatbot.</p>
                     <div class="tech-stack">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
+                        <span class="tech-pill">HTML5</span>
+                        <span class="tech-pill">CSS3</span>
+                        <span class="tech-pill">JavaScript</span>
                     </div>
                 </div>
             </div>
@@ -214,58 +276,89 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Connect With Me</h2>
-            <p class="contact-intro">Feel free to reach out! I'd love to hear from you.</p>
-            
-            <div class="contact-links">
-                <a href="https://github.com/universalvish" target="_blank" class="contact-link">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://instagram.com/vishvanathmokashi" target="_blank" class="contact-link">
-                    <i class="fab fa-instagram"></i>
-                    <span>Instagram</span>
-                </a>
-                <a href="https://linkedin.com/in/vishvanath-mokashi" target="_blank" class="contact-link">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="#" class="contact-link" onclick="openChat()">
-                    <i class="fas fa-comments"></i>
-                    <span>Chat with AI</span>
-                </a>
+            <div class="contact-box glass-card">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2>Connect With Me</h2>
+                    <p class="contact-intro">Feel free to reach out for collaborations, projects, or inquiries! I'd love to connect.</p>
+                </div>
+                
+                <div class="contact-links">
+                    <a href="https://github.com/universalvish" target="_blank" class="contact-link github">
+                        <div class="link-icon"><i class="fab fa-github"></i></div>
+                        <div class="link-text">
+                            <span class="link-label">GitHub</span>
+                            <span class="link-url">@universalvish</span>
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com/in/vishvanath-mokashi" target="_blank" class="contact-link linkedin">
+                        <div class="link-icon"><i class="fab fa-linkedin"></i></div>
+                        <div class="link-text">
+                            <span class="link-label">LinkedIn</span>
+                            <span class="link-url">vishvanath-mokashi</span>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/vishvanathmokashi" target="_blank" class="contact-link instagram">
+                        <div class="link-icon"><i class="fab fa-instagram"></i></div>
+                        <div class="link-text">
+                            <span class="link-label">Instagram</span>
+                            <span class="link-url">@vishvanathmokashi</span>
+                        </div>
+                    </a>
+                    <a href="#" class="contact-link chatbot-btn" onclick="openChat(); return false;">
+                        <div class="link-icon"><i class="fas fa-comments"></i></div>
+                        <div class="link-text">
+                            <span class="link-label">AI Assistant</span>
+                            <span class="link-url">Chat Live Now</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- AI Chatbot -->
+    <!-- AI Chatbot Modal -->
     <div class="chatbot-container" id="chatbotContainer">
         <div class="chatbot-header">
             <div class="chatbot-title">
-                <i class="fas fa-robot"></i>
-                <span>AI Assistant</span>
+                <div class="status-indicator">
+                    <i class="fas fa-robot"></i>
+                    <span class="online-dot"></span>
+                </div>
+                <div class="bot-info">
+                    <span class="bot-name">Vishvanath AI</span>
+                    <span class="bot-status">Online • 8 Languages</span>
+                </div>
             </div>
             <div class="chatbot-controls">
                 <select id="languageSelect" class="language-select">
-                    <option value="en">English</option>
-                    <option value="hi">Hindi</option>
-                    <option value="mr">Marathi</option>
-                    <option value="gu">Gujarati</option>
-                    <option value="ta">Tamil</option>
-                    <option value="te">Telugu</option>
-                    <option value="kn">Kannada</option>
-                    <option value="ml">Malayalam</option>
+                    <option value="en">🌐 English</option>
+                    <option value="hi">🇮🇳 Hindi</option>
+                    <option value="mr">🚩 Marathi</option>
+                    <option value="gu">🌾 Gujarati</option>
+                    <option value="ta">🌴 Tamil</option>
+                    <option value="te">🏛️ Telugu</option>
+                    <option value="kn">🐘 Kannada</option>
+                    <option value="ml">🥥 Malayalam</option>
                 </select>
-                <button id="closeChat" class="close-btn">
+                <button id="closeChat" class="close-btn" aria-label="Close Chat">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
         </div>
 
+        <!-- Quick Suggestions -->
+        <div class="chatbot-quick-pills">
+            <button class="pill-btn" onclick="sendQuickPrompt('What are your top skills?')">💡 Skills</button>
+            <button class="pill-btn" onclick="sendQuickPrompt('Tell me about your projects')">🚀 Projects</button>
+            <button class="pill-btn" onclick="sendQuickPrompt('What is your educational background?')">🎓 Education</button>
+            <button class="pill-btn" onclick="sendQuickPrompt('How can I contact Vishvanath?')">📬 Contact</button>
+        </div>
+
         <div class="chatbot-messages" id="chatbotMessages">
             <div class="message bot-message">
                 <div class="message-content">
-                    <p>👋 Hello! I'm Vishvanath's AI Assistant. I can answer questions about his profile, skills, projects, and more. You can type or use the microphone to speak!</p>
+                    <p>👋 Hello! I'm Vishvanath's AI Assistant. Ask me about his profile, skills, projects, or education in your preferred language!</p>
                 </div>
             </div>
         </div>
@@ -276,13 +369,13 @@
                     type="text" 
                     id="chatInput" 
                     class="chat-input" 
-                    placeholder="Type your message or use the microphone..."
+                    placeholder="Ask me anything..."
                     autocomplete="off"
                 >
                 <button id="micBtn" class="mic-btn" title="Click to speak">
                     <i class="fas fa-microphone"></i>
                 </button>
-                <button id="sendBtn" class="send-btn">
+                <button id="sendBtn" class="send-btn" title="Send message">
                     <i class="fas fa-paper-plane"></i>
                 </button>
             </div>
@@ -290,16 +383,17 @@
         </div>
     </div>
 
-    <!-- Chat Toggle Button (Floating) -->
+    <!-- Chat Toggle Button (Floating FAB) -->
     <button class="chat-fab" id="chatFab" title="Open AI Assistant">
         <i class="fas fa-comments"></i>
+        <span class="fab-pulse"></span>
     </button>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Vishvanath Mokashi. All rights reserved.</p>
-            <p>Built with <i class="fas fa-heart"></i> and AI</p>
+            <p>Designed with <i class="fas fa-heart text-pink"></i> & AI Innovation</p>
         </div>
     </footer>
 

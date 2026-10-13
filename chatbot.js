@@ -196,9 +196,9 @@ class MultilingualChatbot {
                 'mr': "माझे तांत्रिक कौशल्य यांमध्ये समाविष्ट आहे: Java, Python, C, C++, HTML, CSS, JavaScript, React, MySQL, SQL, Git, आणि GitHub। मला डेटा स्ट्रक्चर्स आणि अल्गोरिदम, DBMS, ऑपरेटिंग सिस्टम्स, कंप्यूटर नेटवर्क्स आणि OOP संकल्पनांचे मजबूत ज्ञान आहे."
             },
             'projects': {
-                'en': "I've built several projects including: 1) AI Powered PDF to JSON Engine - converts PDFs to structured JSON using AI, 2) AI Lab Builder Platform - interactive platform for AI models, 3) E-Commerce Website - full-featured online store, 4) Student Management System - comprehensive academic system, and 5) This Portfolio Website with AI chatbot.",
-                'hi': "मैंने कई परियोजनाएं बनाई हैं जिनमें शामिल हैं: 1) AI Powered PDF to JSON Engine - AI का उपयोग करके PDFs को structured JSON में परिवर्तित करता है, 2) AI Lab Builder Platform - AI मॉडल के लिए इंटरैक्टिव प्लेटफॉर्म, 3) E-Commerce Website - पूरी तरह विकसित ऑनलाइन स्टोर, 4) Student Management System - व्यापक शैक्षणिक प्रणाली, और 5) यह पोर्टफोलियो वेबसाइट AI चैटबॉट के साथ।",
-                'mr': "मी अनेक प्रकल्पांवर काम केलो आहे ज्यात समाविष्ट आहे: 1) AI Powered PDF to JSON Engine - AI वापरून PDFचे structured JSON मध्ये रूपांतर करते, 2) AI Lab Builder Platform - AI मॉडेल्सचे इंटरैक्टिव प्लॅटफॉर्म, 3) E-Commerce Website - पूर्ण ऑनलाइन स्टोर, 4) Student Management System - व्यापक शैक्षणिक प्रणाली, आणि 5) हे पोर्टफोलियो वेबसाइट AI चॅटबॉटसह."
+                'en': "I've built several projects including: 1) AI Powered PDF to JSON Engine - converts PDFs to structured JSON using AI, 2) AI Lab Builder Platform - interactive platform for AI models, and 3) This Portfolio Website with AI chatbot.",
+                'hi': "मैंने कई परियोजनाएं बनाई हैं जिनमें शामिल हैं: 1) AI Powered PDF to JSON Engine - AI का उपयोग करके PDFs को structured JSON में परिवर्तित करता है, 2) AI Lab Builder Platform - AI मॉडल के लिए इंटरैक्टिव प्लेटफॉर्म, और 3) यह पोर्टफोलियो वेबसाइट AI चैटबॉट के साथ।",
+                'mr': "मी अनेक प्रकल्पांवर काम केलो आहे ज्यात समाविष्ट आहे: 1) AI Powered PDF to JSON Engine - AI वापरून PDFचे structured JSON मध्ये रूपांतर करते, 2) AI Lab Builder Platform - AI मॉडेल्सचे इंटरैक्टिव प्लॅटफॉर्म, आणि 3) हे पोर्टफोलियो वेबसाइट AI चॅटबॉटसह."
             },
             'education': {
                 'en': "I'm pursuing B.Tech in Computer Science & Engineering. I've also completed certifications from IBM SkillsBuild, Microsoft Learn, HP LIFE, and Web Development programs.",
